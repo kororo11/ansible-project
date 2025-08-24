@@ -1,0 +1,10 @@
+---
+- name: Install Openssh-server
+  host: a
+  become: yes
+  tasks:
+    - name: Install Openssh-server
+      ansible.builtin.yum:
+        name: openssh-server
+        state: present
+        update_cache:yes
