@@ -1,0 +1,16 @@
+---
+- name: Create test
+  hosts: a
+  tasks:
+    - name: Create file
+      ansible.builtin.file:
+        path: /tmp/aa.txt
+        state: touch
+
+    - name: ls command
+      ansible.builtin.command: ls -l /tmp/aa.txt
+      register: ls_output
+
+    - name: Debug output
+      ansible.builtin.debug:
+        var: ls_output.stdout_lines
