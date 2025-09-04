@@ -1,0 +1,5 @@
+---
+- name: Ping test
+  hosts: ansible_host
+  tasks:
+    - ping:
