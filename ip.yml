@@ -1,0 +1,7 @@
+---
+- name: Get IP address of host
+  hosts: ansible_host
+  tasks:
+    - name: Display IP address
+      ansible.builtin.debug:
+        msg: "The IP address of '{{ inventory_hostname }}' is {{ ansible_facts['default_ipv4']['address'] }}"
