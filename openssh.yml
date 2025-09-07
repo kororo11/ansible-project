@@ -1,6 +1,6 @@
 ---
 - name: Install Openssh-server
-  host: a
+  hosts: a
   become: yes
   tasks:
     - name: Install Openssh-server
