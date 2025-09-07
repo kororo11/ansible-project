@@ -1,6 +1,6 @@
 ---
 - name: Create test test gogo
-  hosts: a
+  hosts: ansible_host
   tasks:
     - name: Create file
       ansible.builtin.file:
